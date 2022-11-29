@@ -1,0 +1,276 @@
+@charset "UTF-8";
+:root {
+  --z-index-a11y: 10000;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgba(255, 255, 255, 0.85);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  background: #24292e; /* Fallback */
+  line-height: 1.5;
+}
+
+ul,
+ol,
+dl {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+a {
+  color: rgb(159, 123, 225);
+  text-decoration: none;
+}
+
+.a11y-nav {
+  position: absolute;
+  top: -20em;
+  width: 100%;
+  z-index: var(--z-index-a11y);
+}
+
+#nav-access {
+  text-align: center;
+}
+#nav-access li {
+  display: inline-block;
+  padding: 1em;
+}
+#nav-access li a:hover, #nav-access li a:focus, #nav-access li a:active {
+  text-decoration: none;
+  color: yellow;
+}
+
+.sgd-cta-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(159, 123, 225);
+}
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container {
+  font-weight: 300;
+}
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container strong {
+  color: indigo;
+}
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container b {
+  color: white;
+  text-decoration: underline;
+  -webkit-text-decoration-color: rgba(255, 255, 255, 0.5);
+          text-decoration-color: rgba(255, 255, 255, 0.5);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-decoration-thickness: 2px;
+  text-underline-position: under;
+}
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container em {
+  font-style: normal;
+  font-weight: 300;
+  color: indigo;
+}
+.sgd-cta-container .sgd-cta-controls {
+  text-align: right;
+  margin-right: 20px;
+}
+
+.main-document-header-container {
+  margin: 0 20%;
+}
+.main-document-header-container header {
+  text-align: center;
+}
+.main-document-header-container header strong {
+  display: inline-block;
+  width: 100px;
+  line-height: 100px;
+  height: 100px;
+  background-color: yellow;
+  border-radius: 50%;
+  font-weight: 700;
+  margin: 1em 0 0.25em;
+  font-size: 4em;
+}
+.main-document-header-container header ul li {
+  display: inline-block;
+}
+.main-document-header-container header ul li.active a {
+  color: rgb(159, 123, 225);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+  text-underline-offset: 5px;
+}
+.main-document-header-container header ul li.active a::before {
+  content: "💫";
+  display: inline-block;
+  margin-right: 0.5em;
+}
+.main-document-header-container header ul li a {
+  display: inline-block;
+  margin: 1em;
+  padding: 0.5em;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 600;
+}
+.main-document-header-container header ul li a:hover, .main-document-header-container header ul li a:focus, .main-document-header-container header ul li a:active {
+  color: rgb(159, 123, 225);
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  text-decoration-thickness: 3px;
+  text-underline-position: under;
+  text-underline-offset: 1px;
+}
+
+.main-wrapper {
+  margin: 0 12%;
+}
+.main-wrapper .main-content {
+  text-align: center;
+}
+.main-wrapper h1 {
+  font-size: 3em;
+  font-weight: 400;
+}
+.main-wrapper h2 {
+  font-weight: 200;
+}
+.main-wrapper h3 {
+  font-weight: 400;
+}
+.main-wrapper h4 {
+  font-weight: 600;
+}
+.main-wrapper #download {
+  display: inline-block;
+  margin: 4em auto;
+}
+.main-wrapper .features {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.main-wrapper .features li {
+  flex: 1;
+  display: inline-block;
+}
+.main-wrapper .features li div {
+  margin: 12%;
+}
+.main-wrapper .features li div p {
+  font-size: 0.85em;
+  font-weight: 300;
+}
+.main-wrapper .features li div a {
+  font-weight: bold;
+}
+.main-wrapper aside h2 {
+  font-size: 2em;
+  font-weight: 100;
+}
+.main-wrapper aside h2::first-letter {
+  font-weight: 200;
+  color: yellow;
+}
+.main-wrapper aside ul li {
+  display: inline-block;
+  margin: 0 1em;
+  line-height: 44px;
+}
+.main-wrapper aside ul li:nth-of-type(0)::before {
+  content: "🌑 ";
+}
+.main-wrapper aside ul li:nth-of-type(1)::before {
+  content: "🌘 ";
+}
+.main-wrapper aside ul li:nth-of-type(2)::before {
+  content: "🌗 ";
+}
+.main-wrapper aside ul li:nth-of-type(3)::before {
+  content: "🌖 ";
+}
+.main-wrapper aside ul li:nth-of-type(4)::before {
+  content: "🌕 ";
+}
+.main-wrapper aside ul li:nth-of-type(5)::before {
+  content: "🌚 ";
+}
+.main-wrapper aside ul li:nth-of-type(6)::before {
+  content: "🌔 ";
+}
+.main-wrapper aside ul li:nth-of-type(7)::before {
+  content: "🌓 ";
+}
+.main-wrapper aside ul li:nth-of-type(8)::before {
+  content: "🌒 ";
+}
+.main-wrapper aside ul li:nth-of-type(9)::before {
+  content: "🌙 ";
+}
+.main-wrapper aside ul li:nth-of-type(10)::before {
+  content: "🌝 ";
+}
+.main-wrapper aside ul li:nth-of-type(11)::before {
+  content: "🌛 ";
+}
+.main-wrapper aside ul li:nth-of-type(12)::before {
+  content: "🌜 ";
+}
+.main-wrapper .tail {
+  margin: 5em auto;
+  font-size: 0.75em;
+}
+
+footer {
+  font-size: 0.75em;
+  margin: 4em auto;
+}
+footer p {
+  text-align: center;
+}
+
+/* CSS */
+.button-74 {
+  background-color: transparent;
+  border: 2px solid rgb(159, 123, 225);
+  border-radius: 30px;
+  box-shadow: rgb(159, 123, 225) 4px 4px 0 0;
+  color: rgb(159, 123, 225);
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 0 18px;
+  line-height: 50px;
+  text-align: center;
+  text-decoration: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-74:hover {
+  background-color: #fff;
+}
+
+.button-74:active {
+  box-shadow: #422800 2px 2px 0 0;
+  transform: translate(2px, 2px);
+}
+
+@media (min-width: 768px) {
+  .button-74 {
+    min-width: 120px;
+    padding: 0 25px;
+  }
+}/*# sourceMappingURL=solid.css.map */

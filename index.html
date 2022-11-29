@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Style background images with monochrome"
+    />
+    <title>Solid background</title>
+    <link rel="stylesheet" href="solid.css">
+  </head>
+  <body>
+    <div id="root">
+      <!-- TODO: Accessibility menu -->
+      <ul id="nav-access" class="a11y-nav">
+        <li>
+          <a id="skip-main" href="#content">Skip to main content</a>
+        </li>
+        <li>
+          <a id="skip-search" href="#top-nav-search-input">Skip to search</a>
+        </li>
+        <li>
+          <a id="skip-select-language" href="#languages-switcher-button"
+            >Skip to select language</a
+          >
+        </li>
+      </ul>
+      <!-- TODO: sgd-cta-container -->
+      <div class="sgd-cta-container">
+        <div id="sgd-cta-content" class="sgd-cta-content">
+          <div id="plus_launch_announcement" class="sgd-cta-content-container">
+            <p class="sgd-cta-copy">
+              <strong>Version 1.73</strong> is <b>now</b> available! Read about the <b>new features</b> and fixes from <em>October.</em> ✨
+            </p>
+          </div>
+        </div>
+        <div class="sgd-cta-controls">
+          <button>Close</button>
+        </div>
+      </div>
+      <!-- TODO: page-wrapper -->
+      <div class="page-wrapper">
+        <!-- TODO: main-document-header-container -->
+        <div class="main-document-header-container">
+          <!-- Here is our main header that is used across all the pages of our website -->
+          <header>
+            <strong class="logo">🚀</strong>
+            <nav>
+              <ul>
+                <li class="active"><a href="">Overview</a></li>
+                <li><a href="">Release Notes</a></li>
+                <li><a href="">Help</a></li>
+              </ul>
+            </nav>
+
+            <!-- A Search form is another common non-linear way to navigate through a website. -->
+            <!-- TODO: Search -->
+            <!-- 
+            <form>
+              <input type="search" name="q" placeholder="Search query" />
+              <input type="submit" value="Go!" />
+            </form>
+             -->
+          </header>
+        </div>
+        <div class="main-wrapper">
+          <nav id="sidebar-quicklinks"></nav>
+          <div class="toc"></div>
+          <!-- Here is our page's main content -->
+          <main id="content" class="main-content">
+            <!-- It contains an article -->
+            <article class="main-page-content" lang="en-us">
+              <h1>Mars</h1>
+              <h2>Code editing. Redefined.</h2>
+              <h3>Free. Built on open source. Runs everywhere.</h3>
+
+              <!-- Download -->
+              <a href="https://www.google.com" id="download" class="button-74">Download for Mac OS</a>
+
+              <!-- features -->
+              <ul class="features">
+                <li>
+                  <div>
+                    <!-- Extensions -->
+                    <h4>Intelli Sense</h4>
+                    <!-- 
+                    <p>
+                      Lorem ipsum dolor sit 
+                      <a class="external ext" href="#">Chrome</a>, consectetur
+                      adipisicing elit. Nesciunt facere nemo, ad,
+                    </p>
+                    -->
+                    <p>
+                      Go beyond syntax highlighting and autocomplete with 🛰<a href="">IntelliSense</a>, which provides smart completions based on variable types, function definitions, and imported modules.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Run and Debug</h4>
+                    <!-- 
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing 
+                      <a class="external ext" href="#">firefox</a> elit.
+                      Nesciunt facere nemo, ad, eaque dicta excepturi accusamus
+                      vel deleniti facilis repudiandae hic.
+                    </p>
+                    -->
+                    <p>
+                      Debug code right from the editor. Launch or attach to your running apps and debug with break points, call stacks, and an 🧨<a href="">interactive</a> console.
+                    </p>
+                  </div>
+                </li>
+                <li>
+                  <div>
+                    <h4>Bulit-in Git</h4>
+                    <!--
+                    <p>
+                      Lorem ipsum 
+                      <a class="external ext" href="#">Safari</a> dolor sit
+                      amet, consectetur.
+                    </p>
+                    -->
+                    <p>
+                      Working with 🛸<a href="">Git</a> and other SCM providers has never been easier. Review diffs, stage files, and make commits right from the editor. Push and pull from any hosted SCM service.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+
+              <p class="tail">
+                By downloading, you agree to the <a class="external ext" href="#">Open Source Applications Terms</a>.
+              </p>
+            </article>
+
+            <!-- the aside content can also be nested within the main content -->
+            <aside>
+              <h2>Mars for</h2>
+
+              <ul>
+                <li>JavaScript</li>
+                <li>Python</li>
+                <li>Java</li>
+                <li>Markdown</li>
+                <li>TypeScript</li>
+                <li>C/C++</li>
+                <li>JSON</li>
+                <li>Powershell</li>
+                <li>HTML/CSS</li>
+                <li>C#</li>
+                <li>PHP</li>
+                <li>YAML</li>
+              </ul>
+
+              <p>and many more languages on the Marketplace...</p>
+
+              <!-- Download -->
+              <a href="https://www.google.com" id="download" class="button-74">Get Started Now</a>
+
+            </aside>
+          </main>
+
+          <!-- And here is our main footer that is used across all the pages of our website -->
+
+          <footer>
+            <p>©Copyright 2050 by nobody. All rights reversed.</p>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
