@@ -3,6 +3,12 @@
   --z-index-a11y: 10000;
 }
 
+/* Fallback */
+@counter-style phases-of-the-moon {
+  system: fixed;
+  symbols: "🌑" "🌒" "🌓" "🌔" "🌕" "🌖" "🌗" "🌘" "🌚" "🌛" "🌜" "🌝";
+  suffix: " ";
+}
 html,
 body {
   margin: 0;
@@ -13,7 +19,7 @@ body {
 body {
   color: rgba(255, 255, 255, 0.85);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  background: #24292e; /* Fallback */
+  background: midnightblue;
   line-height: 1.5;
 }
 
@@ -22,11 +28,11 @@ ol,
 dl {
   list-style: none;
   margin: 0;
-  padding-left: 0;
+  padding: 0;
 }
 
 a {
-  color: rgb(159, 123, 225);
+  color: rgba(159, 123, 225, 0.85);
   text-decoration: none;
 }
 
@@ -45,36 +51,36 @@ a {
   padding: 1em;
 }
 #nav-access li a:hover, #nav-access li a:focus, #nav-access li a:active {
-  text-decoration: none;
   color: yellow;
+  text-decoration: none;
 }
 
 .sgd-cta-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  background-color: rgb(159, 123, 225);
+  background-color: mediumblue;
+}
+.sgd-cta-container .sgd-cta-content {
+  flex-grow: 1;
+  margin-left: 20px;
+  text-align: center;
 }
 .sgd-cta-container .sgd-cta-content .sgd-cta-content-container {
   font-weight: 300;
 }
 .sgd-cta-container .sgd-cta-content .sgd-cta-content-container strong {
-  color: indigo;
+  color: lawngreen;
 }
 .sgd-cta-container .sgd-cta-content .sgd-cta-content-container b {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: underline;
-  -webkit-text-decoration-color: rgba(255, 255, 255, 0.5);
-          text-decoration-color: rgba(255, 255, 255, 0.5);
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
-  text-decoration-thickness: 2px;
   text-underline-position: under;
 }
 .sgd-cta-container .sgd-cta-content .sgd-cta-content-container em {
   font-style: normal;
   font-weight: 300;
-  color: indigo;
+  color: lawngreen;
 }
 .sgd-cta-container .sgd-cta-controls {
   text-align: right;
@@ -82,7 +88,7 @@ a {
 }
 
 .main-document-header-container {
-  margin: 0 20%;
+  margin: 0 10%;
 }
 .main-document-header-container header {
   text-align: center;
@@ -97,6 +103,9 @@ a {
   font-weight: 700;
   margin: 1em 0 0.25em;
   font-size: 4em;
+}
+.main-document-header-container header ul {
+  margin-left: -2em;
 }
 .main-document-header-container header ul li {
   display: inline-block;
@@ -131,7 +140,7 @@ a {
 }
 
 .main-wrapper {
-  margin: 0 12%;
+  margin: 0 10%;
 }
 .main-wrapper .main-content {
   text-align: center;
@@ -139,6 +148,10 @@ a {
 .main-wrapper h1 {
   font-size: 3em;
   font-weight: 400;
+}
+.main-wrapper h1::before {
+  content: "16 ";
+  font-weight: 100;
 }
 .main-wrapper h2 {
   font-weight: 200;
@@ -180,49 +193,23 @@ a {
   font-weight: 200;
   color: yellow;
 }
-.main-wrapper aside ul li {
-  display: inline-block;
-  margin: 0 1em;
+.main-wrapper aside .language {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 4em;
+  list-style: phases-of-the-moon;
+}
+.main-wrapper aside .language li {
+  text-align: left;
+  min-width: 130px;
   line-height: 44px;
 }
-.main-wrapper aside ul li:nth-of-type(0)::before {
-  content: "🌑 ";
-}
-.main-wrapper aside ul li:nth-of-type(1)::before {
-  content: "🌘 ";
-}
-.main-wrapper aside ul li:nth-of-type(2)::before {
-  content: "🌗 ";
-}
-.main-wrapper aside ul li:nth-of-type(3)::before {
-  content: "🌖 ";
-}
-.main-wrapper aside ul li:nth-of-type(4)::before {
-  content: "🌕 ";
-}
-.main-wrapper aside ul li:nth-of-type(5)::before {
-  content: "🌚 ";
-}
-.main-wrapper aside ul li:nth-of-type(6)::before {
-  content: "🌔 ";
-}
-.main-wrapper aside ul li:nth-of-type(7)::before {
-  content: "🌓 ";
-}
-.main-wrapper aside ul li:nth-of-type(8)::before {
-  content: "🌒 ";
-}
-.main-wrapper aside ul li:nth-of-type(9)::before {
-  content: "🌙 ";
-}
-.main-wrapper aside ul li:nth-of-type(10)::before {
-  content: "🌝 ";
-}
-.main-wrapper aside ul li:nth-of-type(11)::before {
-  content: "🌛 ";
-}
-.main-wrapper aside ul li:nth-of-type(12)::before {
-  content: "🌜 ";
+.main-wrapper .goto-market-place {
+  display: block;
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 .main-wrapper .tail {
   margin: 5em auto;
@@ -260,7 +247,7 @@ footer p {
 }
 
 .button-74:hover {
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
 }
 
 .button-74:active {
@@ -273,4 +260,25 @@ footer p {
     min-width: 120px;
     padding: 0 25px;
   }
+}
+.guideline {
+  z-index: -1;
+}
+.guideline div {
+  position: fixed;
+  font-size: 1px;
+  background-color: rgba(154, 205, 50, 0.75);
+}
+.guideline .horizontal {
+  width: 100vw;
+  height: 1px;
+  line-height: 1px;
+  top: 50%;
+}
+.guideline .vertical {
+  width: 1px;
+  height: 100vh;
+  line-height: 100%;
+  top: 0;
+  left: 50%;
 }/*# sourceMappingURL=solid.css.map */
