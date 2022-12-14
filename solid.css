@@ -1,8 +1,4 @@
 @charset "UTF-8";
-:root {
-  --z-index-a11y: 10000;
-}
-
 /* Fallback */
 @counter-style phases-of-the-moon {
   system: fixed;
@@ -23,6 +19,12 @@ body {
   line-height: 1.5;
 }
 
+button {
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: inherit;
+}
+
 ul,
 ol,
 dl {
@@ -32,8 +34,13 @@ dl {
 }
 
 a {
-  color: rgba(159, 123, 225, 0.85);
+  color: rgb(159, 123, 225);
   text-decoration: none;
+}
+
+:disabled {
+  cursor: not-allowed;
+  pointer-events: none;
 }
 
 .a11y-nav {
@@ -41,6 +48,10 @@ a {
   top: -20em;
   width: 100%;
   z-index: var(--z-index-a11y);
+}
+
+#root {
+  overflow: hidden;
 }
 
 #nav-access {
@@ -69,15 +80,20 @@ a {
 .sgd-cta-container .sgd-cta-content .sgd-cta-content-container {
   font-weight: 300;
 }
-.sgd-cta-container .sgd-cta-content .sgd-cta-content-container strong {
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container a {
+  display: block;
+  padding: 1em;
+  color: rgba(255, 255, 255, 0.85);
+}
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container a strong {
   color: lawngreen;
 }
-.sgd-cta-container .sgd-cta-content .sgd-cta-content-container b {
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container a b {
   color: rgb(255, 255, 255);
   text-decoration: underline;
   text-underline-position: under;
 }
-.sgd-cta-container .sgd-cta-content .sgd-cta-content-container em {
+.sgd-cta-container .sgd-cta-content .sgd-cta-content-container a em {
   font-style: normal;
   font-weight: 300;
   color: lawngreen;
@@ -86,6 +102,17 @@ a {
   text-align: right;
   margin-right: 20px;
 }
+.sgd-cta-container .sgd-cta-controls .close {
+  border: 0;
+  border-radius: 50%;
+  background-color: transparent;
+}
+.sgd-cta-container .sgd-cta-controls .close::before {
+  content: "X";
+  color: #fff;
+  font-size: 1.5em;
+  font-weight: 200;
+}
 
 .main-document-header-container {
   margin: 0 10%;
@@ -93,16 +120,99 @@ a {
 .main-document-header-container header {
   text-align: center;
 }
-.main-document-header-container header strong {
+.main-document-header-container header #logo {
+  position: relative;
   display: inline-block;
-  width: 100px;
+  width: 100%;
+  height: 100px;
   line-height: 100px;
+  margin: 50px 0;
+}
+.main-document-header-container header #logo .rocket {
+  display: inline-block;
+  position: absolute;
+  top: 14px;
+  left: calc(50% - 84px);
+  height: 100px;
+  line-height: 100px;
+  font-size: 3.5em;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: rocket_;
+          animation-name: rocket_;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+@-webkit-keyframes rocket_ {
+  from {
+    margin-left: -5px;
+    margin-top: 10px;
+    transform: rotate(0.08turn);
+  }
+  to {
+    margin-left: -15px;
+    margin-top: 20px;
+    transform: rotate(0.09turn);
+  }
+}
+@keyframes rocket_ {
+  from {
+    margin-left: -5px;
+    margin-top: 10px;
+    transform: rotate(0.08turn);
+  }
+  to {
+    margin-left: -15px;
+    margin-top: 20px;
+    transform: rotate(0.09turn);
+  }
+}
+.main-document-header-container header #logo .moon {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: calc(50% - 55px);
+  width: 100px;
   height: 100px;
   background-color: yellow;
   border-radius: 50%;
   font-weight: 700;
   margin: 1em 0 0.25em;
-  font-size: 4em;
+  box-shadow: 0 0 4px 8px rgba(255, 255, 0, 0.5647058824);
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+.main-document-header-container header #logo .moon::before {
+  content: "🍔";
+  width: 50px;
+  height: 50px;
+  font-size: 2em;
+}
+@-webkit-keyframes slidein {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 2px;
+    box-shadow: 0 0 8px 0 rgba(255, 255, 0, 0.062745098);
+  }
+}
+@keyframes slidein {
+  from {
+    margin-top: 0;
+  }
+  to {
+    margin-top: 2px;
+    box-shadow: 0 0 8px 0 rgba(255, 255, 0, 0.062745098);
+  }
 }
 .main-document-header-container header ul {
   margin-left: -2em;
@@ -281,4 +391,149 @@ footer p {
   line-height: 100%;
   top: 0;
   left: 50%;
-}/*# sourceMappingURL=solid.css.map */
+}
+
+#toolbar {
+  position: fixed;
+  bottom: 1em;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+#toolbar .black {
+  background-color: black;
+}
+#toolbar .midnightblue {
+  background-color: midnightblue;
+}
+#toolbar .indigo {
+  background-color: indigo;
+}
+#toolbar .white {
+  background-color: white;
+  color: black;
+}
+#toolbar .container {
+  display: flex;
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.75em;
+  padding: 0.75em;
+  border: 1px solid rgba(255, 255, 255, 0.55);
+  border-radius: 0.75em;
+  background-color: rgba(255, 255, 255, 0.55);
+}
+#toolbar .container button {
+  padding: 1em;
+  border: none;
+  border-radius: 0.75em;
+  color: rgba(255, 255, 255, 0.85);
+  text-transform: capitalize;
+}
+#toolbar .container .viewer,
+#toolbar .container .zoom,
+#toolbar .container .theme {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 0.75em;
+  background-color: royalblue;
+}
+#toolbar .container .viewer .value,
+#toolbar .container .viewer .title,
+#toolbar .container .zoom .value,
+#toolbar .container .zoom .title,
+#toolbar .container .theme .value,
+#toolbar .container .theme .title {
+  display: inline-block;
+  padding: 0 1em;
+  font-size: 0.85em;
+  white-space: nowrap;
+}
+#toolbar .container .viewer button,
+#toolbar .container .zoom button,
+#toolbar .container .theme button {
+  border-radius: 0;
+  white-space: nowrap;
+  background-color: dodgerblue;
+}
+#toolbar .container .viewer button.active,
+#toolbar .container .zoom button.active,
+#toolbar .container .theme button.active {
+  cursor: none;
+  outline-offset: 0;
+  pointer-events: none;
+}
+#toolbar .container .viewer button:first-child,
+#toolbar .container .zoom button:first-child,
+#toolbar .container .theme button:first-child {
+  border-top-left-radius: 0.75em;
+  border-bottom-left-radius: 0.75em;
+}
+#toolbar .container .viewer button:last-child,
+#toolbar .container .zoom button:last-child,
+#toolbar .container .theme button:last-child {
+  border-top-right-radius: 0.75em;
+  border-bottom-right-radius: 0.75em;
+}
+#toolbar .container .viewer button.midnightblue.active,
+#toolbar .container .zoom button.midnightblue.active,
+#toolbar .container .theme button.midnightblue.active {
+  background-color: midnightblue;
+}
+#toolbar .container .viewer button.indigo.active,
+#toolbar .container .zoom button.indigo.active,
+#toolbar .container .theme button.indigo.active {
+  background-color: indigo;
+}
+#toolbar .container .viewer button.black.active,
+#toolbar .container .zoom button.black.active,
+#toolbar .container .theme button.black.active {
+  background-color: black;
+}
+#toolbar .container .viewer button:disabled,
+#toolbar .container .zoom button:disabled,
+#toolbar .container .theme button:disabled {
+  background-color: dimgray;
+}
+#toolbar .container .viewer button:hover,
+#toolbar .container .zoom button:hover,
+#toolbar .container .theme button:hover {
+  background-color: deepskyblue;
+}
+#toolbar .container #zoomInit,
+#toolbar .container #zoomOut,
+#toolbar .container #zoomIn {
+  border: 0;
+  min-width: 42px;
+}
+
+.zoom-level {
+  margin-bottom: 10em;
+  text-align: center;
+}
+
+/***********
+ * DISPLAY *
+ ***********/
+.d-none {
+  display: none;
+}
+
+.visually-hidden,
+.visually-hidden-focusable:not(:focus):not(:focus-within) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/*************
+ * ANIMATION *
+ *************//*# sourceMappingURL=solid.css.map */

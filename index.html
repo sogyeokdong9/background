@@ -2,22 +2,45 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="cache-control" content="no-cache" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="Style background images with monochrome"
+      content="Mars is the fourth planet from the Sun and the second-smallest planet in the Solar System, only being larger than Mercury."
     />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon-16x16.png"
+    />
+    <link rel="manifest" href="site.webmanifest" />
     <title>Solid background</title>
     <link rel="stylesheet" href="solid.css" />
   </head>
   <body>
-    <div class="guideline">
-      <div class="horizontal"></div>
-      <div class="vertical"></div>
-    </div>
+    <!-- A11y-nav -->
+    <!-- Line Advertise -->
+    <!-- Logo Animation -->
+    <!-- Navigation Tab -->
+    <!-- Header -->
+    <!-- Features -->
+    <!-- Languages -->
+    <!-- Footer: Page -->
+    <!-- Tool Bar -->
     <div id="root">
-      <!-- TODO: Accessibility menu -->
       <ul id="nav-access" class="a11y-nav">
         <li>
           <a id="skip-main" href="#content">Skip to main content</a>
@@ -31,36 +54,43 @@
           >
         </li>
       </ul>
-      <!-- TODO: sgd-cta-container -->
       <div class="sgd-cta-container">
         <div id="sgd-cta-content" class="sgd-cta-content">
           <div id="plus_launch_announcement" class="sgd-cta-content-container">
-            <p class="sgd-cta-copy">
+            <a href="https://www.google.com/search?q=mars" class="sgd-cta-copy">
               <strong>Version 1.73</strong> is <b>now</b> available! Read about
               the <b>new features</b> and fixes from <em>October.</em> ✨
-            </p>
+            </a>
           </div>
         </div>
         <div class="sgd-cta-controls">
-          <button>Close</button>
+          <button type="button" class="close">
+            <span class="visually-hidden-focusable">Close</span>
+          </button>
         </div>
       </div>
-      <!-- TODO: page-wrapper -->
       <div class="page-wrapper">
-        <!-- TODO: main-document-header-container -->
         <div class="main-document-header-container">
           <!-- Here is our main header that is used across all the pages of our website -->
           <header>
-            <strong class="logo">🚀</strong>
+            <strong id="logo">
+              <div class="moon"></div>
+              <span class="rocket">🚀</span>
+            </strong>
             <nav>
               <ul>
-                <li class="active"><a href="https://www.google.com/search?q=mars">Overview</a></li>
-                <li><a href="https://www.google.com/search?q=mars">Release Notes</a></li>
+                <li class="active">
+                  <a href="https://www.google.com/search?q=mars">Overview</a>
+                </li>
+                <li>
+                  <a href="https://www.google.com/search?q=mars"
+                    >Release Notes</a
+                  >
+                </li>
                 <li><a href="https://www.google.com/search?q=mars">Help</a></li>
               </ul>
             </nav>
             <!-- A Search form is another common non-linear way to navigate through a website. -->
-            <!-- TODO: Search -->
             <!-- 
             <form>
               <input type="search" name="q" placeholder="Search query" />
@@ -81,7 +111,10 @@
               <h2>Code editing. Redefined.</h2>
               <h3>Free. Built on open source. Runs everywhere.</h3>
               <!-- Download -->
-              <a href="https://www.google.com/search?q=mars" id="download" class="button-74"
+              <a
+                href="https://www.google.com/search?q=mars"
+                id="download"
+                class="button-74"
                 >Download for Mac OS</a
               >
               <!-- features -->
@@ -92,9 +125,10 @@
                     <h4>Intelli Sense</h4>
                     <p>
                       Go beyond syntax highlighting and autocomplete with 🛰
-                      <a href="https://www.google.com/search?q=mars">IntelliSense</a>, which provides smart
-                      completions based on variable types, function definitions,
-                      and imported modules.
+                      <a href="https://www.google.com/search?q=mars"
+                        >IntelliSense</a
+                      >, which provides smart completions based on variable
+                      types, function definitions, and imported modules.
                     </p>
                   </div>
                 </li>
@@ -104,7 +138,11 @@
                     <p>
                       Debug code right from the editor. Launch or attach to your
                       running apps and debug with break points, call stacks, and
-                      an 🧨 <a href="https://www.google.com/search?q=mars">interactive</a> console.
+                      an 🧨
+                      <a href="https://www.google.com/search?q=mars"
+                        >interactive</a
+                      >
+                      console.
                     </p>
                   </div>
                 </li>
@@ -112,17 +150,20 @@
                   <div>
                     <h4>Bulit-in Git</h4>
                     <p>
-                      Working with 🛸 <a href="https://www.google.com/search?q=mars">Git</a> and other SCM providers
-                      has never been easier. Review diffs, stage files, and make
-                      commits right from the editor. Push and pull from any
-                      hosted SCM service.
+                      Working with 🛸
+                      <a href="https://www.google.com/search?q=mars">Git</a> and
+                      other SCM providers has never been easier. Review diffs,
+                      stage files, and make commits right from the editor. Push
+                      and pull from any hosted SCM service.
                     </p>
                   </div>
                 </li>
               </ul>
               <p class="tail">
                 By downloading, you agree to the
-                <a class="external ext" href="https://www.google.com/search?q=mars"
+                <a
+                  class="external ext"
+                  href="https://www.google.com/search?q=mars"
                   >Open Source Applications Terms</a
                 >.
               </p>
@@ -158,7 +199,10 @@
                 >and many more languages on the Marketplace...</a
               >
               <!-- Started -->
-              <a href="https://www.google.com/search?q=mars" id="started" class="button-74"
+              <a
+                href="https://www.google.com/search?q=mars"
+                id="started"
+                class="button-74"
                 >Get Started Now</a
               >
             </aside>
@@ -169,6 +213,30 @@
           </footer>
         </div>
       </div>
+      <p class="zoom-level">Current Zoom Level: <span class="output"></span></p>
     </div>
+    <div id="toolbar">
+      <div class="container">
+        <div class="theme">
+          <span class="title">Theme</span>
+          <button type="button" class="midnightblue active">midnightblue</button>
+          <button type="button">indigo</button>
+          <button type="button">black</button>
+        </div>
+        <div class="zoom">
+          <span class="title">Screen <i class="visually-hidden">magnification</i></span>
+          <b class="value">100%</b>
+          <button id="zoomIn" type="button">+</button>
+          <button id="zoomOut" type="button">-</button>
+          <button id="zoomInit" type="button" disabled>Reset</button>
+        </div>
+        <div class="viewer">
+          <span class="title">Viewer</span>
+          <button type="button" class="midnightblue active">Web</button>
+          <button type="button">Reader</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
   </body>
 </html>
